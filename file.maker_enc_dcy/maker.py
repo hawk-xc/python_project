@@ -1,11 +1,14 @@
 import os
 import time
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet 
+import pyfiglet
 
 # data encrypt and decrypt code
 # make and delete any file
 # wahyu hawk
 
+print (pyfiglet.figlet_format("maker!!"))
+print ('by wahyu\n\n')
 # argument
 def message():
     # array table
@@ -135,5 +138,5 @@ elif input_data == 7:
         pass
 
     else:
-        os.system('pip install cryptography')
+        os.system('pip install cryptography pyfiglet')
         print ('success installed!')
