@@ -31,17 +31,11 @@ def message():
         data
         '''
 message()
-try:
-    input_data = int(input('select option : '))
-    if input_data != data:
-        print ('!!!not in value!!!')
-except:
-    print ('!!!insert number in command!!!')
-
+input_data = int(input('select option : '))
 
 # data option
 if input_data == 1:
-    data = input('input name file, format in [.txt] : ')
+    data = input('input name file, format in [.txt/etc] : ')
     text = input('input your data into this file! : ')
     if os.path.exists(data):
         qst = input('remove file exist?\ny/n\n> ')
@@ -53,25 +47,38 @@ if input_data == 1:
                 fileadd_.close()
                 print ('file successful add and write!')
     else:
-        pass
+        with open(data, 'w') as fileadd_:
+            fileadd_.write(text)
+            fileadd_.close()
+            print ('file successful add and write!')
+            print ('save in :', os.path.dirname(os.path.abspath(image_data)))
 
 elif input_data == 2:
-    keyname = input('input name filekey, format in [.key] : ')
+    keyname = input('input name filekey : ')
+    key_data = keyname+'.key'
     key = Fernet.generate_key()
-    if os.path.exists(data):
+    if os.path.exists(key_data):
         qst = input('remove file exist?\ny/n\n> ')
         if qst != "y":
             print ('file exist, failed!')
         else:
-            with open(keyname, 'wb') as filekey_:
+            with open(key_data, 'wb') as filekey_:
                 filekey_.write(key)
                 print ('filekey successful added!, this is your filekey -')
                 filekey_.close()
 
-            with open(keyname, 'r') as keyread_:
+            with open(key_data, 'r') as keyread_:
                 print (keyread_.read())
     else:
-        pass
+        with open(key_data, 'wb') as filekey_:
+            filekey_.write(key)
+            print ('filekey successful added!, this is your filekey -')
+            filekey_.close()
+
+        with open(key_data, 'r') as keyread_:
+            print (keyread_.read())
+
+        print ('save in : ', os.path.dirname(os.path.abspath(key_data)))
 
 elif input_data == 3:
     fileenc = input('select name file can be encrypt : ')
