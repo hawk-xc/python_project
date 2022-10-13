@@ -1,0 +1,11 @@
+{
+    "name": "hawkxc",
+    "mail": "hawkxc068@gmail.com",
+    "pass": "P@55W0RD_1S_BEAUTIFUL",
+    "account": {
+        "git": ["github.com", "gitlab.com"],
+        "youtube": True,
+        "facebook": False,
+    },
+    "role": ["security analyst", "data analyst", "incident response team"]
+}
