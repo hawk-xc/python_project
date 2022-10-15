@@ -1,3 +1,7 @@
+# jika belum ada module tabulate
+# install module tabulate dengan PIP
+# pip install tabulate
+# okeyy
 from tabulate import tabulate
 # nama Wahyu Tri Cahyono
 # 12221171
