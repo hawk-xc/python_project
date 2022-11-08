@@ -1,8 +1,20 @@
-from textwrap import indent
-import pandas as pd
+import time
+import sys
 
-data = ['satu', 'dua', 'tiga', 'empat', 'lima', 1, 2, 3, 4, 5]
+tm = 2
+#here is the animation
+def animate():
+    while tm < 2:
+        sys.stdout.write('\rloading |')
+        time.sleep(0.1)
+        sys.stdout.write('\rloading /')
+        time.sleep(0.1)
+        sys.stdout.write('\rloading -')
+        time.sleep(0.1)
+        sys.stdout.write('\rloading \\')
+        time.sleep(0.1)
+    sys.stdout.write('\rDone!     ')
 
-sec = pd.Series(data)
-
-print (sec[[2, 9]])
+animate()
+#long process here
+done = 'false'

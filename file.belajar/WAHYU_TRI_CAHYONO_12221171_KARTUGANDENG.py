@@ -20,7 +20,7 @@
     warna = ''
 
     while warna != 'quit':
-        nilai = int(input('masukkan nilai kartu [1-6] '))
+        nilai = input('masukkan nilai kartu [1-6] ')
         warna = input('masukkan kode warna [H/h, M/m] ')
         if nilai in range(1, 7):
             if warna == "h" or warna == "H":

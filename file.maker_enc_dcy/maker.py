@@ -49,7 +49,7 @@ if input_data == 1:
     else:
         with open(data, 'w') as fileadd_:
             fileadd_.write(text)
-            fileadd_.close()
+            fileadd_.close() 
             print ('file successful add and write!')
             print ('save in :', os.path.dirname(os.path.abspath(image_data)))
 
@@ -83,6 +83,7 @@ elif input_data == 2:
 elif input_data == 3:
     fileenc = input('select name file can be encrypt : ')
     KEYENC = input('your keyfile name : ')
+    
     with open(KEYENC, 'rb') as fileenc_:
         keypass = fileenc_.read()
 
@@ -95,7 +96,8 @@ elif input_data == 3:
 
         with open(fileenc, 'wb') as encrypted_file_:
             encrypted_file_.write(encrypt)
-            print (fileenc, 'successful decrypt!')
+            print (fileenc, 'successful encrypt!')
+
     except:
         print ('failure')
         pass
