@@ -1,3 +1,6 @@
+# wahyu tri cahyono
+# 12221171
+
 def mergeSort(X):
     print("Bilangan diurutkan ",X)
     if len(X) < 2:
