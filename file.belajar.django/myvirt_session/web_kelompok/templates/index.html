@@ -1,0 +1,410 @@
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>FreeFolio - Freelancer Portfolio Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Free</span>Folio</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#qualification" class="nav-item nav-link">Quality</a>
+                <a href="#skill" class="nav-item nav-link">Skill</a>
+                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <a href="#testimonial" class="nav-item nav-link">Review</a>
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+    <!-- Header Start -->
+    <!--
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Kate Winslet</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="" class="btn btn-outline-light mr-5">Download CV</a>
+                        <button type="button" class="btn-play" data-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <!-- Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">ABOUT</h1>
+                <h1 class="position-absolute text-uppercase text-primary">BIOGRAFI PAHLAWAN</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" style='width: 10px;' src="{% static 'img/rakartini.jpeg' %}" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4">Raden Adjeng Kartini</h3>
+                    <p>Raden Adjeng Kartini berasal dari kalangan priayi atau kelas bangsawan Jawa. Ia merupakan putri dari Raden Mas Adipati Ario Sosroningrat, seorang patih yang diangkat menjadi bupati Jepara segera setelah Kartini lahir. Kartini adalah putri dari istri pertama, tetapi bukan istri utama. Ibunya bernama <stM.A. Ngasirah, putri dari Nyai Haji Siti Aminah dan Kyai Haji Madirono, eorang guru agama di Telukawur, Jepara. Dari sisi ayahnya, silsilah Kartini dapat dilacak hingga Hamengkubuwana VI. Garis keturunan Bupati Sosroningrat bahkan dapat ditilik kembali ke istana Kerajaan Majapahit. Semenjak Pangeran Dangirin menjadi bupati Surabaya pada abad ke-18, nenek moyang Sosroningrat mengisi banyak posisi penting di Pangreh Praja.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6>Nama : <span class="text-secondary">RA Kartini</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Pasangan : <span class="text-secondary">KRM Adipati Ario Singgih Djojo Adhiningrat</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Lahir : <span class="text-secondary">Jepara, Hindia Belanda, 21 April 1879</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Orang tua : <span class="text-secondary">Raden Mas Adipati Ario Sosroningrat & M.A. Ngasirah</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Anak : <span class="text-secondary">Soesalit Djojoadhiningrat</span></h6></div>
+                        <div class="col-sm-6 py-2"><h6>Saudara kandung : <span class="text-secondary">Roekmini, Kardinah, Soematri, Kartinah, Sulastri, Sosrokartono, Busono, Slamet, Muljono, Rawito</span></h6></div>
+                    </div>
+                    <a href="https://id.wikipedia.org/wiki/Kartini" class="btn btn-outline-primary">Baca lebih lengkap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">RA.KARTINI</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Sejarah dan perjalanan hidup</h1>
+            </div>
+            <p>
+                Raden Adjeng Kartini atau sebenarnya lebih tepat disebut Raden Ayu Kartini adalah seorang tokoh Jawa dan Pahlawan Nasional Indonesia. Kartini dikenal sebagai pelopor kebangkitan perempuan Nusantara. Ia adalah seorang aktivis Indonesia terkemuka yang mengadvokasi hak-hak perempuan dan pendidikan perempuan.
+            </p>
+            <p>
+                Sejarah Singkat RA Kartini Kartini lahir pada 21 April 1879 atau 28 Rabiul Akhir tahun Jawa 1808 di Mayong afdeling Japara (kini Jepara). RA Kartini berasal dari keluarga priyayi atau bangsawan Jawa di Jepara. Ayahnya, Raden Mas Adipati Ario Sosroningrat adalah bupati di sana. RA Kartini masuk sekolah dasar eropa atau Europesche Lagere School (ELS) pada 1885. Anak pribumi yang diizinkan mengikuti pendidikan bersama anak-anak bangsa Eropa dan Belanda-Indo di ELS hanya anak pejabat tinggi pemerintah. Meskipun dari kalangan bangsawan, anak perempuan masuk sekolah dan keluar rumah merupakan langkah yang bertentangan dengan tradisi saat itu, seperti dikutip dari Pendidikan Feminis R.A. Kartini oleh Irma Nailul Muna. Sekolah di ELS, Kartini belajar dengan bahasa Belanda sebagai bahasa pengantar. Kemampuan bahasanya makin kuat karena rajin membaca buku dan koran berbahasa Belanda. Kartini juga belajar bercakap dengan bahasa Belanda sambil bermain dan menerima tamu bangsa Belanda yang datang ke Jepara. Siswa pribumi di ELS sering mendapatkan perlakuan diskriminatif seperti pandangan rendah dari sesama siswa dan guru dari Belanda. Perlakuan tersebut memacu semangatnya terus berprestasi agar bisa mengalahkan siswa lain. Meskipun mendapat perlakuan diskriminatif dari siswa dan guru dari Belanda, Kartini justru semangat memperoleh pengetahuan lebih banyak dan berprestasi.
+            </p>
+            <p>
+                Dikutip dari buku Sisi Lain Kartini, ia menceritakan dirinya tengah belajar pemikiran pejuang wanita dari India Pundita Ramambai pada temannya, Nyonya Nelly Van Kol. "Tentang putri Hindia yang gagah berani ini telah banyak kami dengar. Saya masih bersekolah, ketika pertama kali mendengar tentang perempuan yang berani itu. Aduhai? Saya masih ingat betul: saya masih sangat muda, anak berumur 10 atau 11 tahun, ketika dengan semangat menyala-nyala saya membaca dia di surat kabar. Saya gemetar karena gembira: jadi bukan hanya untuk perempuan berkulit putih saja ada kemungkinan untuk merebut kehidupan bebas bagi dirinya! Perempuan Hindia berkulit hitam, jika bisa membebaskan, memerdekakan diri." Namun setelah lulus ELS, Kartini dilarang ayahnya melanjutkan pendidikan di HBS Semarang. Saat itu, tradisi bangsawan mewajibkan anak usia 12 tahun yang sudah dianggap dewasa untuk dipingit. Saat dipingit, anak perempuan tidak boleh keluar rumah, termasuk ke sekolah, karena harus menyiapkan diri untuk menikah dan menjadi ibu rumah tangga. Karena itu, Kartini juga tidak mendapat izin untuk lanjut sekolah di Belanda seperti tawaran orangtua Letsy, temannya. Ia lalu dipaksa belajar aturan putri bangsawan, eperti berbicara dengan suara halus dan lirih, berjalan setapak dan menundukkan kepala jika anggota keluarga yang lebih tua lewat. Kartini yang dipingit mengesampingkan kekecewaannya tidak lanjut sekolah dengan membaca dan mencatat. Sejumlah catatannya termasuk pandangan hidup yang bisa dicontoh, jiwa dan pemikiran besar, dan perilaku yang baik. Ia juga berkirim surat pada sahabatnya untuk mempelajari pemikiran baru dan menyampaikan keinginannya tentang dunia pendidikan di daerahnya. Terjemahan surat-surat Kartini kelak membuka bahwa dirinya punya berbagai gagasan untuk mengangkat derajat kaum perempuan bumiputera di dunia internasional lewat pendidikan.
+            </p>
+            <br>
+            <center>
+                <h3 class="mb-4">Perjalanan hidup</h3>
+            </center>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Lahirnya Beliau</h5>
+                            <p class="mb-2"><strong> Jepara, Jawa Tenga</strong> | <small>21 April 1879</small></p>
+                            <p>R.A Kartini lahir pada 21 April 1879 di Jepara, Jawa Tengah. Ia merupakan anak dari keturunan bangsawan Jawa, yaitu Raden Mas Adipati Ario Sosroningrat dan M.A. Ngasirah.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Bersekolah</h5>
+                            <p class="mb-2"><strong>ELS (Europese Lagere School)</strong> | <small>1991</small></p>
+                            <p>
+                                R.A Kartini memperoleh pendidikan lantaran mewarisi darah bangsawan dari ayahnya. Dia disekolahkan di ELS (Europese Lagere School) hingga usia 12 tahun sembari mempelajari berbagai hal, termasuk bahasa Belanda. Di masa itu, ada kebiasaan yang turun-temurun dilakukan. Anak perempuan yang sudah berusia 12 tahun harus tinggal di rumah untuk dipingit.
+                            </p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Berjodoh</h5>
+                            <p class="mb-2"><strong>Rembang</strong> | <small>2000 - 2050</small></p>
+                            <p>
+                                Kartini dinikahkan dengan Bupati Rembang bernama KRM Adipati Ario Singgih Djojo Adhiningrat, yang sudah pernah memiliki tiga istri. Setelah menikah, sang suami mendukung penuh mimpi-mimpi Kartini, salah satunya untuk membangun sebuah sekolah khusus wanita di sebelah timur pintu gerbang kompleks kantor Kabupaten Rembang. 
+                            </p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Keturunan & Kematian Beliau</h5>
+                            <p class="mb-2"><strong>Desa Bulu, Kecamatan Bulu, Rembang</strong> | <small>13 September 1904</small></p>
+                            <p>
+                                Kartini melahirkan seorang putra bernama Soesalit Djojoadhiningrat. Hanya berselang empat hari melahirkan, Kartini meninggal dunia pada 17 September 1904. Hanya berselang empat hari melahirkan, Kartini meninggal dunia pada 17 September 1904. RA Kartini meninggal dunia pada usia 25 tahun dan dimakamkan di Desa Bulu, Kecamatan Bulu, Rembang.
+
+                                Usai kematiannya, surat-surat Kartini dikumpulkan dan diterbitkan dalam sebuah buku berjudul 'Door Duisternis tot Licht' atau Habis Gelap Terbitlah Terang oleh salah satu temanya di Belanda, Mr JH Abendanon, yang saat itu menjabat Menteri Kebudayaan, Agama, dan Kerajinan Hindia Belanda. Buku ini diterbitkan pada 1911 dengan bahasa Belanda sehingga tak banyak warga pribumi yang bisa membacanya.
+                            </p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Jasa Beliau</h5>
+                            <p class="mb-2"><strong>Semarang</strong> | <small>1912</small></p>
+                            <p>
+                                Berkat kegigihannya Kartini kemudian didirikan sekolah wanita oleh yayasan Kartini di Semarang pada 1912, kemudian di Surabaya, Yogyakarta, Malang, Madiun Cirebon dan daerah lainnya, nama sekolah tersebut adalah “Sekolah Kartini”. Yayasan Kartni ini didirikan oleh keluarga Van Deventer seorang tokoh politik etis. R.A Kartini cucu pangeran Ario Tjondronegoro, Bupati Demak yang terkenal suka akan kemajuan. Beliaulah Bupati yang pertama-tama yang mendidik anakanaknya, laki-laki maupum perempuan dengan pelajaran barat.
+                            </p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Karya Beliau</h5>
+                            <p class="mb-2"><strong>Hindia Belanda</strong> | <small>1911 - 1922</small></p>
+                            <p>Usai kematiannya, surat-surat Kartini dikumpulkan dan diterbitkan dalam sebuah buku berjudul 'Door Duisternis tot Licht' atau Habis Gelap Terbitlah Terang oleh salah satu temanya di Belanda, Mr JH Abendanon, yang saat itu menjabat Menteri Kebudayaan, Agama, dan Kerajinan Hindia Belanda. Buku ini diterbitkan pada 1911 dengan bahasa Belanda sehingga tak banyak warga pribumi yang bisa membacanya.
+                                Kemudian pada 1922, Balai Pustaka menerbitkan versi terjemahan buku Habis Gelap Terbitlah Terang: Buat Pikiran dengan bahasa Melayu.</p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Pahlawan Nasional</h5>
+                            <p class="mb-2"><strong>Jakarta</strong> | <small>2 Mei 1964</small></p>
+                            <p>
+                                Dalam Keputusan Presiden Republik Indonesia No 108 Tahun 1964, pada tanggal 2 Mei 1964, Presiden Sukarno menetapkan Kartini sebagai Pahlawan Kemerdekaan Nasional. Sukarno juga menetapkan hari lahir Kartini, 21 April, diperingati sebagai Hari Kartini sampai sekarang.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">RA.KARTINI</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Jasa & Kenangan Beliau</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <center>
+        <h3 class="mb-4">Buku-Buku Bacaan R.A. Kartini</h3>
+    </center>
+    <p>
+        R.A. Kartini banyak membaca surat kabar Semarang De Locomotief yang diasuh Pieter Brooshooft, ia juga menerima Leestrommel (paket majalah yang diedarkan toko buku kepada langganan). Diantaranya terdapat majalah kebudayaan dan ilmu pengetahuan yang cukup berat, juga ada majalah wanita Belanda De Hollandsche Lelie. Kartini pun beberapa kali mengirimkan tulisannya dan dimuat di De Hollandsche Lelie. Diantara buku yang dibaca R.A. Kartini diantaranya terdapat judul Max Havelaar dan surat-surat cinta karya Multatuli, yang pada Nopember 1901 sudah dibacanya dua kali. Lalu De Stille Kraacht (kekuatan gaib) karya Louis Coperus, Kemudian karya Van Eeden yang bermutu tinggi, karya Augusta de Witt yang sedang-sedang saja, roman feminis karya Nyonya Goekoop de Jong Van Beek dan sebuah roman anti perang karangan Berta Von Suttner, Sie Waffen Nieder (letakkan senjata) semua berbahasa Belanda.
+    </p>
+    <p>
+        Buku-buku bacaan yang dibaca R.A. Kartini ini memang tidak seberapa jika dibandingkan dengan masa sekarang, namun jika buku-buku bacaan itu muncul di masa R.A. Kartini maka itu hal yang luar biasa dan mengagumkan, karena di masa R.A. Kartini itu sulit dan jarang sekali didapatkan buku-buku sepeti itu, yang ada hanya surat menyurat. Jadi R.A. Kartini termasuk perempuan yang cerdas, kreatif, yang selalu ingin berpikir maju pada zamannya.
+    </p>
+    <center>
+        <h3 class="mb-4">Sekolah Kartini (Kartinischool), 1918.</h3>
+    </center>
+    <p>
+        Anak pertama dan sekaligus terakhirnya, Soesalit Djojoadhiningrat, lahir pada tanggal 13 September 1904. Beberapa hari kemudian, 17 September 1904, Kartini meninggal pada usia 25 tahun. Kartini dimakamkan di Desa Bulu, Kecamatan Bulu, Rembang.
+    </p>
+    <p>
+        Berkat kegigihannya Kartini, kemudian didirikan Sekolah Wanita oleh Yayasan Kartini di Semarang pada 1912, dan kemudian di Surabaya, Yogyakarta, Malang, Madiun, Cirebon dan daerah lainnya. Nama sekolah tersebut adalah “Sekolah Kartini”. Yayasan Kartini ini didirikan oleh keluarga Van Deventer, seorang tokoh Politik Etis.
+    </p>
+    <center>
+        <h3 class="mb-4">Buku-Buku Bacaan R.A. Kartini</h3>
+    </center>
+    <p>
+        Setelah Kartini wafat, Mr. J.H. Abendanon mengumpulkan dan membukukan surat-surat yang pernah dikirimkan R.A Kartini pada teman-temannya di Eropa. Abendanon saat itu menjabat sebagai Menteri Kebudayaan, Agama, dan Kerajinan Hindia Belanda. Buku itu diberi judul Door Duisternis tot Licht yang arti harfiahnya “Dari Kegelapan Menuju Cahaya”. Buku kumpulan surat Kartini ini diterbitkan pada 1911. Buku ini dicetak sebanyak lima kali, dan pada cetakan terakhir terdapat tambahan surat Kartini.
+    </p>
+    <p>
+        Pada tahun 1922, Balai Pustaka menerbitkannya dalam bahasa Melayu dengan judul yang diterjemahkan menjadi Habis Gelap Terbitlah Terang: Boeah Pikiran, yang merupakan terjemahan oleh Empat Saudara. Kemudian tahun 1938, keluarlah Habis Gelap Terbitlah Terang versi Armijn Pane seorang sastrawan Pujangga Baru. Armijn membagi buku menjadi lima bab pembahasan untuk menunjukkan perubahan cara berpikir Kartini sepanjang waktu korespondensinya. Versi ini sempat dicetak sebanyak sebelas kali. Surat-surat Kartini dalam bahasa Inggris juga pernah diterjemahkan oleh Agnes L. Symmers. Selain itu, surat-surat Kartini juga pernah diterjemahkan ke dalam bahasa-bahasa Jawa dan Sunda.
+    </p>
+    <p>
+        Terbitnya surat-surat Kartini, seorang perempuan pribumi, sangat menarik perhatian masyarakat Belanda, dan pemikiran-pemikiran Kartini mulai mengubah pandangan masyarakat Belanda terhadap perempuan pribumi di Jawa. Pemikiran-pemikiran Kartini yang tertuang dalam surat-suratnya juga menjadi inspirasi bagi tokoh-tokoh kebangkitan nasional Indonesia, antara lain W.R. Soepratman yang menciptakan lagu berjudul Ibu Kita Kartini.
+    </p>
+    <center>
+        <h3 class="mb-4">Pemikiran R.A. Kartini</h3>
+    </center>
+    <p>
+        Pada surat-surat Kartini tertulis pemikiran-pemikirannya tentang kondisi sosial saat itu, terutama tentang kondisi perempuan pribumi. Sebagian besar surat-suratnya berisi keluhan dan gugatan khususnya menyangkut budaya di Jawa yang dipandang sebagai penghambat kemajuan perempuan. Dia ingin wanita memiliki kebebasan menuntut ilmu dan belajar. Kartini menulis ide dan cita-citanya, seperti tertulis: Zelf-ontwikkeling dan Zelf-onderricht, Zelf- vertrouwen dan Zelf-werkzaamheid dan juga Solidariteit. Semua itu atas dasar Religieusiteit, Wijsheid en Schoonheid (yaitu Ketuhanan, Kebijaksanaan dan Keindahan), ditambah dengan Humanitarianisme (peri kemanusiaan) dan Nasionalisme (cinta tanah air).
+    </p>
+    <p>
+        Surat-surat Kartini juga berisi harapannya untuk memperoleh pertolongan dari luar. Pada perkenalan dengan Estelle “Stella” Zeehandelaar, Kartini mengungkap keinginan untuk menjadi seperti kaum muda Eropa. Ia menggambarkan penderitaan perempuan Jawa akibat kungkungan adat, yaitu tidak bisa bebas duduk di bangku sekolah, harus dipingit, dinikahkan dengan laki-laki yang tak dikenal, dan harus bersedia dimadu.
+    </p>
+    <p>
+        Pandangan-pandangan kritis lain yang diungkapkan Kartini dalam surat-suratnya adalah kritik terhadap agamanya.[butuh rujukan] Ia mempertanyakan mengapa kitab suci harus dilafalkan dan dihafalkan tanpa diwajibkan untuk dipahami. Ia mengungkapkan tentang pandangan bahwa dunia akan lebih damai jika tidak ada agama yang sering menjadi alasan manusia untuk berselisih, terpisah, dan saling menyakiti. “…Agama harus menjaga kita daripada berbuat dosa, tetapi berapa banyaknya dosa diperbuat orang atas nama agama itu…”[butuh rujukan] Kartini mempertanyakan tentang agama yang dijadikan pembenaran bagi kaum laki-laki untuk berpoligami. Bagi Kartini, lengkap sudah penderitaan perempuan Jawa yang dunianya hanya sebatas tembok rumah.
+    </p>
+    <p>
+        Surat-surat Kartini banyak mengungkap tentang kendala-kendala yang harus dihadapi ketika bercita-cita menjadi perempuan Jawa yang lebih maju. Meski memiliki seorang ayah yang tergolong maju karena telah menyekolahkan anak-anak perempuannya meski hanya sampai umur 12 tahun, tetap saja pintu untuk ke sana tertutup. Kartini sangat mencintai sang ayah, namun ternyata cinta kasih terhadap sang ayah tersebut juga pada akhirnya menjadi kendala besar dalam mewujudkan cita-cita. Sang ayah dalam surat juga diungkapkan begitu mengasihi Kartini. Ia disebutkan akhirnya mengizinkan Kartini untuk belajar menjadi guru di Betawi, meski sebelumnya tak mengizinkan Kartini untuk melanjutkan studi ke Belanda ataupun untuk masuk sekolah kedokteran di Betawi.
+    </p>
+    <p>
+        Keinginan Kartini untuk melanjutkan studi, terutama ke Eropa, memang terungkap dalam surat-suratnya. Beberapa sahabat penanya mendukung dan berupaya mewujudkan keinginan Kartini tersebut. Ketika akhirnya Kartini membatalkan keinginan yang hampir terwujud tersebut, terungkap adanya kekecewaan dari sahabat-sahabat penanya. Niat dan rencana untuk belajar ke Belanda tersebut akhirnya beralih ke Betawi saja setelah dinasihati oleh Nyonya Abendanon bahwa itulah yang terbaik bagi Kartini dan adiknya Rukmini.
+    </p>
+    <p>
+        Pada pertengahan tahun 1903 saat berusia sekitar 24 tahun, niat untuk melanjutkan studi menjadi guru di Betawi pun pupus. Dalam sebuah surat kepada Nyonya Abendanon, Kartini mengungkap tidak berniat lagi karena ia sudah akan menikah. “…Singkat dan pendek saja, bahwa saya tiada hendak mempergunakan kesempatan itu lagi, karena saya sudah akan kawin…” Padahal saat itu pihak departemen pengajaran Belanda sudah membuka pintu kesempatan bagi Kartini dan Rukmini untuk belajar di Betawi.
+    </p>
+    <p>
+        Saat menjelang pernikahannya, terdapat perubahan penilaian Kartini soal adat Jawa. Ia menjadi lebih toleran. Ia menganggap pernikahan akan membawa keuntungan tersendiri dalam mewujudkan keinginan mendirikan sekolah bagi para perempuan bumiputra kala itu. Dalam surat-suratnya, Kartini menyebutkan bahwa sang suami tidak hanya mendukung keinginannya untuk mengembangkan ukiran Jepara dan sekolah bagi perempuan bumiputra saja, tetapi juga disebutkan agar Kartini dapat menulis sebuah buku.
+    </p>
+    <p>
+        Perubahan pemikiran Kartini ini menyiratkan bahwa dia sudah lebih menanggalkan egonya dan menjadi manusia yang mengutamakan transendensi, bahwa ketika Kartini hampir mendapatkan impiannya untuk bersekolah di Betawi, dia lebih memilih berkorban untuk mengikuti prinsip patriarki yang selama ini ditentangnya, yakni menikah dengan Adipati Rembang.
+    </p>
+        </div>
+    </div>
+    <!-- Skill End -->
+
+
+    
+    <!-- Portfolio Start -->
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Design</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Development</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+
+    <!-- Testimonial Start -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                    Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Kelompok dasar pemrograman</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">Fitrii</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
